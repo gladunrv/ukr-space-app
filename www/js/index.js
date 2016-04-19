@@ -16,6 +16,25 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ 
+document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+  };
+
+  window.plugins.OneSignal.init("AIzaSyD9zj2AQwzq7SN9HvMztYZyC95QLF4q-X4",
+                                 {googleProjectNumber: "734925860220"},
+                                 notificationOpenedCallback);
+  
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+}, false); 
+ 
+ 
+ 
 var app = {
     // Application Constructor
     initialize: function() {
