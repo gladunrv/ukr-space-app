@@ -25,7 +25,7 @@ document.addEventListener('deviceready', function () {
     console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
   };
 
-  window.plugins.OneSignal.init("AIzaSyD9zj2AQwzq7SN9HvMztYZyC95QLF4q-X4",
+  window.plugins.OneSignal.init("77c42d08-4a12-4052-be4e-4b9a3e8c879e",
                                  {googleProjectNumber: "734925860220"},
                                  notificationOpenedCallback);
   
